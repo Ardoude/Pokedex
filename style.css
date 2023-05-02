@@ -1,0 +1,96 @@
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(75,0,130), rgb(106,90,205) );
+    height: 100vh;
+}
+
+
+.mainName{ /* To be edited */
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.pokeContainer{
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon{
+    background: white;
+    padding: 10px;
+    
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+
+    position: relative;
+
+    margin: 10px;
+
+    text-align: center;
+}
+
+
+.pokeInfo{
+    
+}
+
+
+.pokeName{
+    font-size: medium;
+}
+
+.pokeNumber{
+    font-size: small;
+    font-weight: bold;
+}
+
+
+.pokeType{
+    font-size: small;
+    font-weight: bold;
+    /*background: white;*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 1px 4px 3px 5px;
+    margin: 1px;
+    flex-direction: row;
+}
+
+
+.pokeShowOff{
+    background: rgb(181, 179, 179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+.pokeBackground{
+    opacity: 100%;
+    position: absolute;
+}
+
+
+.pokeImage{
+    z-index: 15; /* Ficar na frente do background */
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
