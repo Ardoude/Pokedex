@@ -1,13 +1,18 @@
+@import url(//db.onlinewebfonts.com/c/073a3b73a63a87e100f6bb8f003fc0d3?family=Flexo+Light);
+
 *{
     box-sizing: 0;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Flexo Light", sans-serif;
+
+    
 }
 
 body{
-    background: linear-gradient(to bottom, rgb(75,0,130), rgb(106,90,205) );
-    height: 100vh;
+    /*background: linear-gradient(to bottom, rgb(255, 217, 0), rgba(228, 228, 6, 0.575) );*/
+    background-image: url("/assets/body_bg.png");
+    height: 100%;
 }
 
 
@@ -28,10 +33,10 @@ body{
 .pokemon{
     background: white;
     padding: 10px;
+
+    width: 110px;
     
-    border: 2px;
-    border-style: solid;
-    border-color: black;
+    border: none;
     border-radius: 20px;
 
     position: relative;
@@ -39,8 +44,70 @@ body{
     margin: 10px;
 
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s;
 }
 
+.pokemon:hover{
+    transform: scale(1.05);
+}
+
+.headerContainer{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchContainer{
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20vh;
+    width: fit-content;
+    height: fit-content;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    background: white;
+}
+
+.searchContainer input, text{
+    width: 20vh;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: #000;
+}
+
+.searchContainer img{
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    width: 10px;
+}
+
+.searchContainer form{
+    padding: 0;
+}
+
+.searchContainer button{
+    background: red;
+    cursor: pointer;
+    width: 3vh;
+    height: 20px;
+    border-radius: 10px;
+    float: right;
+}
+
+.logo img{
+    width: 50%;
+}
 
 .pokeInfo{
     
@@ -60,6 +127,7 @@ body{
 .pokeType{
     font-size: small;
     font-weight: bold;
+    max-width: fit-content;
     /*background: white;*/
     text-align: center;
     border-radius: 5px;
@@ -74,7 +142,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 20px;
     margin-bottom: 10px;
 }

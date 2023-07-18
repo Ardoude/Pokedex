@@ -40,8 +40,9 @@ const createPokeCard = (poke) => {
     let typeColor = []
     card.classList.add("pokemon")
 
-    const name = poke.name
+    const name = poke.name[0].toUpperCase() + poke.name.substring(1)
     const id = poke.id
+    const showId = ('000' + id).slice(-3);
 
     const types = poke.types.map(types => types.type.name) /* Tipos do pokemon */
 
@@ -71,7 +72,7 @@ const createPokeCard = (poke) => {
         </div>
 
         <div class="pokeInfo">
-            <span class="pokeNumber">${id}</span>
+            <span class="pokeNumber">#${showId}</span>
             <h1 class="pokeName">${name}</h1> 
             ${cardTypes.join('')}
         </div>
